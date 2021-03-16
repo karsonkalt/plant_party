@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "httparty", "~> 0.18.1"
 
 gem "json", "~> 2.5"
+
+gem "bcrypt", "~> 3.1"
