@@ -30,7 +30,7 @@ nav {
     left: 0;
     width: 100%;
     background-color: white;
-    font-family: 'Unica One';
+    font-family: 'Permanent Marker', cursive;
 }
 
 .nav-container {
@@ -45,7 +45,7 @@ nav {
 .page-title {
     margin-right: 35px;
     font-size: 25px;
-    color: #0076FF;
+    color: #34b800;
 }
 
 .main-nav {
@@ -57,8 +57,8 @@ nav {
 .action-link {
     font-size: 20px;
     text-decoration: none;
-    font-family: 'Unica One';
-    background-color: #0076FF;
+    font-family: 'Permanent Marker', cursive;
+    background-color: #34b800;
     color: white;
     padding: 5px 25px;
     border-radius: 15px;
@@ -67,15 +67,15 @@ nav {
 }
 
 .action-link:hover {
-    background-color: #005dba;
+    background-color: #34b800;
 }
 
 .secondary-link {
     font-size: 20px;
     text-decoration: none;
-    font-family: 'Unica One';
-    border: 2px solid #0076FF;
-    color: #0076FF;
+    font-family: 'Permanent Marker', cursive;
+    border: 2px solid #34b800;
+    color: #34b800;
     padding: 5px 25px;
     border-radius: 15px;
     background-color: white;
@@ -84,8 +84,8 @@ nav {
 
 .secondary-link:hover {
     background-color: #edf6ff;
-    border: 2px solid #004691;
-    color: #004691;
+    border: 2px solid #34b800;
+    color: #34b800;
 }
 
 .delete-link {
@@ -102,7 +102,7 @@ nav {
 .disabled-link {
     font-size: 20px;
     text-decoration: none;
-    font-family: 'Unica One';
+    font-family: 'Permanent Marker', cursive;
     background-color: #cfcfcf;
     color: white;
     padding: 5px 25px;
@@ -242,7 +242,7 @@ nav {
 
 .form-item {
     margin-bottom: 15px;
-    font-family: 'Roboto';
+    font-family: 'Arial';
 }
 
 .form-item .text-label {
@@ -298,14 +298,14 @@ nav {
 }
 
 h1 {
-    font-family: 'Roboto';
+    font-family: 'Permanent Marker', cursive;
     font-weight: 900;
     font-style: italic;
     margin:0 0 15px 0;
 }
 
 h2 {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-weight: 700;
     font-style: italic;
     margin:0 0 10px 0;
@@ -313,20 +313,20 @@ h2 {
 }
 
 h3 {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-weight: 700;
     color: #4C4C4C;
 }
 
 h4 {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-weight: 300;
     margin:0 0 20px 0;
     color: #4C4C4C;
 }
 
 .attribute {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-weight: 300;
     font-size: 15px;
     line-height: 25px;
@@ -383,7 +383,7 @@ h4 {
 }
 
 .timestamps {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-size: 12px;
     color: #949494;
 }
@@ -393,7 +393,7 @@ h4 {
 }
 
 .trick-link {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-size: 12px;
     color: #d4d4d4;
     margin-left: 15px;
@@ -408,7 +408,7 @@ h4 {
 }
 
 .edit-info {
-    font-family: 'Roboto';
+    font-family: 'Arial';
     font-size: 12px;
     color: #949494;
     text-decoration: underline;
@@ -438,7 +438,7 @@ h4 {
 
 .small-column-link {
     text-decoration: none;
-    color: #0060D0;
+    color: #34b800;
     font-weight:400;
     display: inline-block;
 }
@@ -461,10 +461,14 @@ h4 {
 .top-parks {
     background-color: #fff7d8;
     border: 1px solid #e8b602;
-    border-radius: 15px;;
+    border-radius: 15px;
     color: #e8b602;
     font-size: 14px;
     margin-bottom: 30px;
     display: inline-block;
     padding: 5px 15px;
+}
+
+.plant-image {
+    width: 200px;
 }

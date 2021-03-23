@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_015057) do
+ActiveRecord::Schema.define(version: 2021_03_23_201851) do
+
+  create_table "plant_waterings", force: :cascade do |t|
+    t.integer "plant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant_id"], name: "index_plant_waterings_on_plant_id"
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "nickname"
+    t.integer "species"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "days_to_be_watered"
+  end
+
+  create_table "user_plants", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "plant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant_id"], name: "index_user_plants_on_plant_id"
+    t.index ["user_id"], name: "index_user_plants_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -20,4 +44,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_015057) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "plant_waterings", "plants"
+  add_foreign_key "user_plants", "plants"
+  add_foreign_key "user_plants", "users"
 end

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +18,7 @@
   <div class="nav-container">
     <div class="navbar-left-items">
       <a class="nav-item page-title" href="/">Plant Party</a>
-      <a class="nav-item main-nav" href="/plants">Plants</a>
+      <a class="nav-item main-nav" href="/species">Species</a>
       <a class="nav-item main-nav" href="/users">Users</a>
     </div>
     <div class="navbar-right-items"> 
@@ -26,6 +27,9 @@
     </div>
   </div>
 </nav>
+
+<div class="flash-container">
+</div>
 
 <div class="page-body">
   <div class="page-container">
