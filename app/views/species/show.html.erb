@@ -9,7 +9,9 @@
 </div>
 <div class="medium-column">
     <div class="card padded-card">
-        <h2>Your Friends Who Have This Plant</h2>
-        <h3>NOBODY!</h3>
+        <h1>Users who have this plant</h1>
+        <% @users.each do |user| %>
+            <h2> <%= user.username %> </h2>
+        <% end %>
     </div>
 </div>

@@ -17,4 +17,8 @@ class Plant < ApplicationRecord
         self.days_to_be_watered - self.last_watered_days_ago
     end
 
+    def species_obj
+        Species.find_by_id(self.species)
+    end
+
 end

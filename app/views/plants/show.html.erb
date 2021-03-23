@@ -1,0 +1,14 @@
+<div class="medium-column">
+    <div class="card padded-card">
+        <h1><%= @plant.nickname %></h1>
+        <h2><%= @plant.species_obj.common_name %></h2>
+        <h3>Needs to be watered every <%= @plant.days_to_be_watered %> days</h3>
+        <h3>Last Watered <%= @plant.last_watered %></h3>
+        <h3>Water again in <%= @plant.needs_to_be_watered_in_days %> days</h3>
+        <h3>Plant belongs to</h3>
+        <% @plant.users.each do |user| %>
+            <h3><%= user.username %></h3>
+        <% end %>
+        <img class="plant-image" src="<%= @plant.species_obj.image_url %>">
+    </div>
+</div>
