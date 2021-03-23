@@ -1,0 +1,9 @@
+<div class="medium-column">
+    <div class="card padded-card">
+        <h1><%= @user.username %></h1>
+        <h3>Plants</h3>
+        <% @user.plants.each do |plant| %>
+            <h3><a href="/plants/<%=plant.id%>">"<%= plant.nickname %>" -- <%= plant.species_obj.common_name %></a></h3>
+        <% end %>
+    </div>
+</div>
