@@ -4,7 +4,7 @@ class Species
     def initialize
     end
 
-    def self.new_from_search(query)
+    def self.search(query)
         result = TrefleConnection.search(query)
         result.map do |item|
             new_plant = self.new
@@ -19,11 +19,14 @@ class Species
         end
     end
 
-    def self.find_from_id(id)
+    def self.find(id)
+        self.find_by_id(id)
+    end
+
+    def self.find_by_id(id)
         new_plant = self.new
         result = TrefleConnection.id(id)
-
-        new_plant.id = result["id"]
+        new_plant.id = result["main_species_id"]
         new_plant.common_name = result["common_name"]
         new_plant.slug = result["slug"]
         new_plant.scientific_name = result["scientific_name"]
@@ -31,6 +34,17 @@ class Species
         new_plant.year = result["year"]
         new_plant.family_common_name = result["family_common_name"]
         new_plant
+    end
+
+    #Instance Methods
+
+    def plants
+        Plant.where(species: self.id )
+    end
+
+    def users
+        user_array = self.plants.map { |plant| plant.users}
+        user_array.flatten
     end
 
 end
