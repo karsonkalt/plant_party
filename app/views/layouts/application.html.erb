@@ -6,11 +6,33 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+
+<%# Following is from old template %>
+ <nav>
+  <div class="nav-container">
+    <div class="navbar-left-items">
+      <a class="nav-item page-title" href="/">Plant Party</a>
+      <a class="nav-item main-nav" href="/plants">Plants</a>
+      <a class="nav-item main-nav" href="/users">Users</a>
+    </div>
+    <div class="navbar-right-items"> 
+        <a class="secondary-link" href="/signup">Signup</a>
+        <a class="action-link" href="/login">Login</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-body">
+  <div class="page-container">
     <%= yield %>
-  </body>
+  </div>
+</div>
+
+</body>
 </html>
+
